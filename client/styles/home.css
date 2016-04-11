@@ -1,0 +1,15 @@
+img.link-main{
+    height: 180px !important;
+    margin: 0 auto;
+}
+
+.home .link-m{
+    display: block;
+    width: 100%;
+    background-color: #E7E7E7;
+    border-radius:5px;
+}
+
+.home .link-m:hover{
+    background-color: #5E889E;
+}
