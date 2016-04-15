@@ -1,0 +1,37 @@
+<template name="incomeRegisters">
+    <div class="panel panel-primary">
+        <div class="panel-heading">Movimientos</div>
+        <div class="panel-body">
+            <table class="table table-condensed">
+                <thead>
+                <tr>
+                    <!--<th>#</th>-->
+                    <th>Tipo</th>
+                    <th>Valor</th>
+                    <th>Moneda</th>
+                    <th>Concepto</th>
+                    <th>Fecha</th>
+                    <th>Accion</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each moneyRegisters}}
+                    <tr>
+                        <!--<td>1</td>-->
+                        <td>{{tipo}}</td>
+                        <td>{{valor}}</td>
+                        <td>{{moneda}}</td>
+                        <td>{{concepto}}</td>
+                        <td>{{fecha}}</td>
+                        <td>
+                            <span id="editButton" data-id="{{_id}}" data-toggle="modal" data-target="#modalUpdate" class="update-movement btn btn-info btn-xs glyphicon glyphicon-pencil"></span>
+                            <span data-id="{{_id}}" class="delete-movement btn btn-danger btn-xs glyphicon glyphicon-remove"></span>
+                        </td>
+                    </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {{>incomUpdateForm}}
+</template>

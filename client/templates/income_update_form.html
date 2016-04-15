@@ -1,0 +1,60 @@
+<template name="incomUpdateForm">
+    <!-- Modal -->
+    <div id="modalUpdate" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content" id="modalUpdateMovement">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Actualizar Movimiento</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <div class="input-group-addon">$</div>
+                                        <input id="updateAmount" type="text" name="amount" class="form-control" placeholder="Valor">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <select name="currency" class="form-control" id="sel1">
+                                        <option id="updateCOP" value="COP">COP</option>
+                                        <option id="updateUs" value="US">US</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="radio-inline">
+                                    <input id="updateOptionIn" type="radio" name="moneyOption"  value="Ingreso"> Ingreso
+                                </label>
+                                <label class="radio-inline">
+                                    <input id="updateOptionOut" type="radio" name="moneyOption" value="Egreso"> Egreso
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Concepto</label>
+                            <input id="updateConcept" name="detail" type="text" class="form-control" placeholder="Concepto">
+                        </div>
+
+                        <input type="hidden" name="IdMovement" id="updateID">
+
+                        <div class="modal-footer">
+                                <button type="submit" class="btn btn-primary" data-dismiss="">
+                                    Guardar
+                                </button>
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</template>
